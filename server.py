@@ -8,7 +8,6 @@ KEY_PATH = "privkey.pem"
 CRT_PATH = "fullchain.pem"
 
 
-
 @app.route("/")
 def renderHTML():
     """
@@ -25,6 +24,7 @@ def renderInfo():
     """
     pass
 
+
 if __name__ == "__main__":
     """
     Launch flask application, with SSL certificate if available
@@ -34,7 +34,7 @@ if __name__ == "__main__":
         # Forcing https:// connections
         sslify = SSLify(app)
         # Running the app with certificates
-        app.run(host='0.0.0.0', ssl_context=(CRT_PATH, KEY_PATH))
+        app.run(host='0.0.0.0', ssl_context=(CRT_PATH, KEY_PATH), port='8000')
     else:
         print("Loading HTTP")
-        app.run(host='0.0.0.0')
+        app.run(host='0.0.0.0', port='8000')

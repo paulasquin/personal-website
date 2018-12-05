@@ -5,10 +5,9 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    env_file: .env
     volumes:
       - .:/usr/src/app
       - /etc/letsencrypt/live/serveurpapillon.ddns.net/fullchain.pem:/usr/src/app/fullchain.pem
       - /etc/letsencrypt/live/serveurpapillon.ddns.net/privkey.pem:/usr/src/app/privkey.pem
     ports:
-      - 5000:5000
+      - 8000:8000
