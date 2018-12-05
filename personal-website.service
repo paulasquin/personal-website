@@ -1,0 +1,17 @@
+# /etc/systemd/system/personal-website.service
+
+[Unit]
+Description=Docker Compose Application Service
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=~/Github/personal-website
+ExecStart=/usr/local/bin/docker-compose -f docker-compose-ssl.yml up
+ExecStop=/usr/local/bin/docker-compose down
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
