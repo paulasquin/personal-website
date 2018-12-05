@@ -2,16 +2,46 @@
 
 <html lang="en">
 
-    {% include 'components/head_template.html' %}
+{% include 'components/head_template.html' %}
 
-    <body>
+<body>
 
-        {% include 'components/menu.html' %}
+{% include 'components/menu.html' %}
 
-        <div class="main-container">
+<div class="main-container">
 
-            {% include 'components/header.html' %}
+    {% include 'components/header.html' %}
 
+    <section id="education" class="main-section">
+
+        <legend class="section-title">Education</legend>
+
+        <div class="education-block">
+            <legend class="education-name">MSc in Computer Science and Artificial Intelligence - CentraleSupélec,
+                Paris
+            </legend>
         </div>
-    </body>
+
+        <div class="education-block">
+            <legend class="education-name">MSc in Robotics - Centrale Nantes</legend>
+        </div>
+
+    </section>
+
+    <section id="experience" class="main-section">
+
+        <legend class="section-title">Experiences</legend>
+
+        <div class="experience-block">
+            <legend>Awabot</legend>
+        </div>
+
+        <div class="experience-block">
+            <legend>SUWAVE</legend>
+        </div>
+
+    </section>
+
+</div>
+</body>
 </html>

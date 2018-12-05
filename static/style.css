@@ -5,7 +5,7 @@ body {
 	background-color: #ECF0F1;
 }
 
-.container {
+.main-container {
     width: 90%;
 }
 
@@ -16,23 +16,16 @@ h1 {
     margin-bottom: 40px;
 }
 
-
-.main {
-    margin-top: 30px;
+.main-section {
 }
 
-
-.menu a {
-
-    font-size: 17px;
+.education-block {
+    padding: 10px;
+    margin: 30px;
+    box-shadow: 1px 1px 4px #aaa;
+    width: 30%;
 }
 
-
-.menu .icon {
-    display: none;
-}
-
-
-.head {
-    margin-top: 50px;
+.section-title{
+    font-size: x-large;
 }
